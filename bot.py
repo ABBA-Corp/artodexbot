@@ -6,7 +6,11 @@ from aiogram.contrib.fsm_storage.memory import MemoryStorage
 
 from tgbot.config import load_config
 from tgbot.db.factory import create_pool
+from tgbot.dialogs import register_dialogs
+from tgbot.handlers.buttons import register_buttons
 from tgbot.handlers.commands import register_commands
+from tgbot.handlers.content import register_other
+from tgbot.handlers.query_handlers import register_query_handlers
 from tgbot.middlewares import register_middlewares
 
 logger = logging.getLogger(__name__)
@@ -14,7 +18,7 @@ logger = logging.getLogger(__name__)
 
 async def main():
     logging.basicConfig(
-        level=logging.INFO,
+        level=logging.DEBUG,
         format="%(asctime)s - %(levelname)s - %(name)s - %(message)s",
     )
     logger.error("Starting bot")
@@ -27,6 +31,10 @@ async def main():
 
     register_middlewares(dp, pool)
     register_commands(dp)
+    register_query_handlers(dp)
+    register_buttons(dp)
+    register_other(dp)
+    register_dialogs(dp)
 
     try:
         await dp.start_polling()

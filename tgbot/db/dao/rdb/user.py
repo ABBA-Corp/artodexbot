@@ -1,4 +1,4 @@
-from sqlalchemy import insert, select
+from sqlalchemy import insert, select, update
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from tgbot.db.dao.rdb import BaseDAO
@@ -13,13 +13,17 @@ class UserDAO(BaseDAO[User]):
             self,
             user_id: int,
             name: str,
-            username: str | None
+            username: str | None,
+            language: str,
+            phone_number: str
     ):
         await self.session.execute(
             insert(User).values(
                 user_id=user_id,
                 name=name,
-                username=username
+                username=username,
+                language=language,
+                phone_number=phone_number
             )
         )
         await self.session.commit()
@@ -37,4 +41,34 @@ class UserDAO(BaseDAO[User]):
             select(User)
         )
         return result.scalars().all()
+
+    async def update_language(self, user_id: int, language: str):
+        await self.session.execute(
+            update(User).filter(
+                User.user_id == user_id
+            ).values(
+                language=language
+            )
+        )
+        await self.session.commit()
+
+    async def edit_user_name(self, user_id: int, name: str):
+        await self.session.execute(
+            update(User).filter(
+                User.user_id == user_id
+            ).values(
+                name=name
+            )
+        )
+        await self.session.commit()
+
+    async def edit_user_phone(self, user_id: int, phone: str):
+        await self.session.execute(
+            update(User).filter(
+                User.user_id == user_id
+            ).values(
+                phone=phone
+            )
+        )
+        await self.session.commit()
     

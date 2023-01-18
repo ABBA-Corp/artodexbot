@@ -15,6 +15,7 @@ class DbConfig:
 class TgBot:
     token: str
     admin_id: int
+    channel_id: int
 
 
 @dataclass
@@ -31,7 +32,8 @@ def load_config(path: str):
     return Config(
         tg_bot=TgBot(
             token=tg_bot["token"],
-            admin_id=int(tg_bot["admin_id"])
+            admin_id=int(tg_bot["admin_id"]),
+            channel_id=int(tg_bot["channel_id"])
         ),
         db=DbConfig(**config["db"]),
     )

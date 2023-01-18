@@ -4,10 +4,25 @@ from sqlalchemy import engine_from_config
 from sqlalchemy import pool
 
 from alembic import context
+from tgbot.db.models.base import metadata
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
+from tgbot.config import Config, load_config
+
 config = context.config
+bot_config: Config = load_config('bot.ini')
+url = "postgresql+asyncpg://{user}:{password}@{host}:{port}/{database}?async_fallback=True".format(
+        user=bot_config.db.user,
+        password=bot_config.db.password,
+        host=bot_config.db.host,
+        port=bot_config.db.port,
+        database=bot_config.db.database
+)
+config.set_main_option(
+    "sqlalchemy.url",
+    url
+)
 
 # Interpret the config file for Python logging.
 # This line sets up loggers basically.
@@ -18,7 +33,7 @@ if config.config_file_name is not None:
 # for 'autogenerate' support
 # from myapp import mymodel
 # target_metadata = mymodel.Base.metadata
-target_metadata = None
+target_metadata = metadata
 
 # other values from the config, defined by the needs of env.py,
 # can be acquired:

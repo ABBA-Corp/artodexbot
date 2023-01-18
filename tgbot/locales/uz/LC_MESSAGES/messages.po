@@ -7,18 +7,112 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-01-05 18:10+0500\n"
-"PO-Revision-Date: 2023-01-05 18:10+0500\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: uz\n"
+"POT-Creation-Date: 2023-01-18 19:58+0500\n"
+"PO-Revision-Date: 2023-01-18 20:02+0500\n"
+"Last-Translator: \n"
 "Language-Team: uz <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Language: uz\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.9.1\n"
+"X-Generator: Poedit 3.0.1\n"
 
-#: tgbot/handlers/commands/start.py:23
-msgid "Главное меню"
+#: dialogs/category/getters.py:17 keyboards/default/main_menu.py:14
+msgid "📦 Категории"
+msgstr "📦 Kategoriyalar"
+
+#: dialogs/category/getters.py:19 dialogs/category/getters.py:32
+#: dialogs/category/getters.py:34 dialogs/category/getters.py:52
+msgid "🚫 Отмена"
+msgstr "🚫 Bekor qilish"
+
+#: dialogs/category/getters.py:35 dialogs/category/getters.py:53
+msgid "⬅️ Назад"
+msgstr "⬅️ Orqaga"
+
+#: dialogs/category/getters.py:42 dialogs/category/handlers.py:48
+msgid ""
+"🗒 Наименование: {name}\n"
+"📤 Штрих-код: {barcode}"
 msgstr ""
+"🗒 Nomi: {name}\n"
+"📤 Shtrix-kod: {barcode}"
 
+#: dialogs/category/getters.py:51
+msgid "💵 Купить"
+msgstr "💵 Sotib olish"
+
+#: handlers/buttons/main_menu.py:10 handlers/commands/start.py:23
+#: handlers/content/register.py:53 handlers/query_handlers/language.py:34
+msgid "Главное меню"
+msgstr "Asosiy menyu"
+
+#: handlers/buttons/settings.py:20
+msgid "Выберите пункт меню"
+msgstr "Kerakli menu bandini tanlang"
+
+#: handlers/buttons/settings.py:29
+msgid ""
+"👤 Ваше текущее имя: {name}\n"
+"Введите новое имя"
+msgstr ""
+"👤 Sizning hozirgi ismingiz: {name}\n"
+"Yangi nom kiriting"
+
+#: handlers/buttons/settings.py:38
+msgid "✅ Имя успешно изменено"
+msgstr "✅ Ism muvaffaqiyatli o'zgartirildi"
+
+#: handlers/buttons/settings.py:56
+msgid ""
+"📞 Ваш текущий номер телефона: {phone}\n"
+"Введите новый номер телефона"
+msgstr ""
+"📞 Joriy telefon raqamingiz: {phone}\n"
+"Yangi telefon raqamini kiriting"
+
+#: handlers/buttons/settings.py:65
+msgid "✅ Номер телефона успешно обновлён"
+msgstr "✅ Telefon raqami yangilandi"
+
+#: handlers/content/register.py:21
+msgid "Отправьте номер телефона"
+msgstr "Telefon raqamingizni yuboring"
+
+#: handlers/content/register.py:26
+msgid "📞 Поделиться номером телефона"
+msgstr "📞 Telefon raqamini ulashish"
+
+#: handlers/query_handlers/language.py:24
+msgid "Введите ваше имя"
+msgstr "Ismingizni kiriting"
+
+#: keyboards/default/main_menu.py:18
+msgid "⏳ История заказов"
+msgstr "⏳ Buyurtmalar tarixi"
+
+#: keyboards/default/main_menu.py:21
+msgid "⚙️ Настройки"
+msgstr "⚙️ Sozlamalar"
+
+#: keyboards/default/main_menu.py:22
+msgid "📧 Социальные сети"
+msgstr "📧 Ijtimoiy tarmoqlar"
+
+#: keyboards/default/settings.py:12
+msgid "👤 Изменить имя"
+msgstr "👤 Ismni o’zgartirish"
+
+#: keyboards/default/settings.py:13
+msgid "🌐 Изменить язык"
+msgstr "🌐 Tilni o’zgartirish"
+
+#: keyboards/default/settings.py:14
+msgid "📞 Изменить номер телефона"
+msgstr "📞 Telefon raqamini o’zgartirish"
+
+#: keyboards/default/settings.py:15
+msgid "🏠 Главное меню"
+msgstr "🏠 Asosiy menyu"

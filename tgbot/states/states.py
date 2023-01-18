@@ -18,3 +18,4 @@ class MenuForm(StatesGroup):
     category = State()
     product = State()
     info = State()
+    count = State()

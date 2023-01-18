@@ -14,6 +14,7 @@ class DbSessionMiddleware(LifetimeControllerMiddleware):
     async def pre_process(self, obj, data, *args):
         session = self.session_pool()
         dao: HolderDao = HolderDao(session=session)
+        data['session'] = session
         data['dao'] = dao
 
     async def post_process(self, obj, data, *args):

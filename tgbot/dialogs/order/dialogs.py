@@ -53,8 +53,8 @@ menu = Dialog(
     Window(
         Format('{info}'),
         Button(
-            Format('{buy}'),
-            id='buy',
+            Format('{select}'),
+            id='select',
             on_click=on_buy_click
         ),
         Row(
@@ -64,4 +64,25 @@ menu = Dialog(
         getter=info_getter,
         state=MenuForm.info
     ),
+    # Window(
+    #     Format('{enter_count}'),
+    #     Select(
+    #         Format('{item[0]}'),
+    #         id='count',
+    #         item_id_getter=operator.itemgetter(1),
+    #         items="numbers",
+    #         on_click=
+    #     ),
+    #     Row(
+    #         Button(
+    #             Format('{buy}'),
+    #             id='buy',
+    #             on_click=
+    #         ),
+    #         Cancel(Format('{cancel}')),
+    #         Back(Format('{back}')),
+    #     ),
+    #     getter=info_getter,
+    #     state=MenuForm.count
+    # ),
 )

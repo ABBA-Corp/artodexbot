@@ -1,9 +1,9 @@
 from aiogram import Dispatcher
 from aiogram_dialog import DialogRegistry
-from tgbot.dialogs import category
+from tgbot.dialogs import order
 
 
 def register_dialogs(dp: Dispatcher):
     registry = DialogRegistry(dp)
-    category.setup(registry)
+    order.setup(registry)
 

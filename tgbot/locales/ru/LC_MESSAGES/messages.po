@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-01-05 18:10+0500\n"
+"POT-Creation-Date: 2023-01-18 19:58+0500\n"
 "PO-Revision-Date: 2023-01-05 18:10+0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ru\n"
@@ -19,7 +19,95 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
 
-#: tgbot/handlers/commands/start.py:23
+#: dialogs/category/getters.py:17 keyboards/default/main_menu.py:14
+msgid "📦 Категории"
+msgstr ""
+
+#: dialogs/category/getters.py:19 dialogs/category/getters.py:32
+#: dialogs/category/getters.py:34 dialogs/category/getters.py:52
+msgid "🚫 Отмена"
+msgstr ""
+
+#: dialogs/category/getters.py:35 dialogs/category/getters.py:53
+msgid "⬅️ Назад"
+msgstr ""
+
+#: dialogs/category/getters.py:42 dialogs/category/handlers.py:48
+msgid ""
+"🗒 Наименование: {name}\n"
+"📤 Штрих-код: {barcode}"
+msgstr ""
+
+#: dialogs/category/getters.py:51
+msgid "💵 Купить"
+msgstr ""
+
+#: handlers/buttons/main_menu.py:10 handlers/commands/start.py:23
+#: handlers/content/register.py:53 handlers/query_handlers/language.py:34
 msgid "Главное меню"
+msgstr ""
+
+#: handlers/buttons/settings.py:20
+msgid "Выберите пункт меню"
+msgstr ""
+
+#: handlers/buttons/settings.py:29
+msgid ""
+"👤 Ваше текущее имя: {name}\n"
+"Введите новое имя"
+msgstr ""
+
+#: handlers/buttons/settings.py:38
+msgid "✅ Имя успешно изменено"
+msgstr ""
+
+#: handlers/buttons/settings.py:56
+msgid ""
+"📞 Ваш текущий номер телефона: {phone}\n"
+"Введите новый номер телефона"
+msgstr ""
+
+#: handlers/buttons/settings.py:65
+msgid "✅ Номер телефона успешно обновлён"
+msgstr ""
+
+#: handlers/content/register.py:21
+msgid "Отправьте номер телефона"
+msgstr ""
+
+#: handlers/content/register.py:26
+msgid "📞 Поделиться номером телефона"
+msgstr ""
+
+#: handlers/query_handlers/language.py:24
+msgid "Введите ваше имя"
+msgstr ""
+
+#: keyboards/default/main_menu.py:18
+msgid "⏳ История заказов"
+msgstr ""
+
+#: keyboards/default/main_menu.py:21
+msgid "⚙️ Настройки"
+msgstr ""
+
+#: keyboards/default/main_menu.py:22
+msgid "📧 Социальные сети"
+msgstr ""
+
+#: keyboards/default/settings.py:12
+msgid "👤 Изменить имя"
+msgstr ""
+
+#: keyboards/default/settings.py:13
+msgid "🌐 Изменить язык"
+msgstr ""
+
+#: keyboards/default/settings.py:14
+msgid "📞 Изменить номер телефона"
+msgstr ""
+
+#: keyboards/default/settings.py:15
+msgid "🏠 Главное меню"
 msgstr ""
 

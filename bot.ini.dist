@@ -1,0 +1,11 @@
+[tg_bot]
+token =
+admin_id =
+channel_id =
+
+[db]
+user =
+password =
+database =
+host =
+port =

@@ -66,5 +66,6 @@ async def on_buy_click(
         chat_id=config.tg_bot.channel_id,
         text=info
     )
+    await manager.switch_to(MenuForm.ordered)
 
 # async def

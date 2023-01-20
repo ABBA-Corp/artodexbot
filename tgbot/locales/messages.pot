@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-01-18 19:58+0500\n"
+"POT-Creation-Date: 2023-01-20 18:37+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,27 +17,41 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
 
-#: dialogs/category/getters.py:17 keyboards/default/main_menu.py:14
+#: dialogs/order/getters.py:17 keyboards/default/main_menu.py:14
 msgid "📦 Категории"
 msgstr ""
 
-#: dialogs/category/getters.py:19 dialogs/category/getters.py:32
-#: dialogs/category/getters.py:34 dialogs/category/getters.py:52
+#: dialogs/order/getters.py:19 dialogs/order/getters.py:32
+#: dialogs/order/getters.py:34 dialogs/order/getters.py:52
 msgid "🚫 Отмена"
 msgstr ""
 
-#: dialogs/category/getters.py:35 dialogs/category/getters.py:53
+#: dialogs/order/getters.py:35 dialogs/order/getters.py:53
 msgid "⬅️ Назад"
 msgstr ""
 
-#: dialogs/category/getters.py:42 dialogs/category/handlers.py:48
+#: dialogs/order/getters.py:42
 msgid ""
 "🗒 Наименование: {name}\n"
 "📤 Штрих-код: {barcode}"
 msgstr ""
 
-#: dialogs/category/getters.py:51
+#: dialogs/order/getters.py:51
 msgid "💵 Купить"
+msgstr ""
+
+#: dialogs/order/getters.py:62
+msgid "✅ Ваш заказ принят"
+msgstr ""
+
+#: dialogs/order/handlers.py:51
+msgid ""
+"📋 Новый заказ:\n"
+"👤 Заказчик: {user}\n"
+"👨 Юзернейм: {username}\n"
+"📲 Номер телефона: {phone}\n"
+"📦 Товар: {name}\n"
+"📤 Штрих-код: {barcode}"
 msgstr ""
 
 #: handlers/buttons/main_menu.py:10 handlers/commands/start.py:23

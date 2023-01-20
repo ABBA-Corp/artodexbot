@@ -52,3 +52,12 @@ async def info_getter(dialog_manager: DialogManager, **kwargs):
         "cancel": _('🚫 Отмена'),
         "back": _('⬅️ Назад')
     }
+
+
+async def order_confirmed(
+        dialog_manager: DialogManager,
+        **kwargs
+):
+    return {
+        "ordered": _('✅ Ваш заказ принят')
+    }

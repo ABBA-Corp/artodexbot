@@ -37,7 +37,7 @@ async def products_getter(dialog_manager: DialogManager, **kwargs):
 
 
 async def info_getter(dialog_manager: DialogManager, **kwargs):
-    item_id = dialog_manager.data.get('item_id')
+    item_id = dialog_manager.current_context().dialog_data.get('item_id')
     item = await get_product_info(code=item_id)
     info = _(
         "🗒 Наименование: {name}\n"
@@ -51,13 +51,4 @@ async def info_getter(dialog_manager: DialogManager, **kwargs):
         "buy": _('💵 Купить'),
         "cancel": _('🚫 Отмена'),
         "back": _('⬅️ Назад')
-    }
-
-
-async def order_confirmed(
-        dialog_manager: DialogManager,
-        **kwargs
-):
-    return {
-        "ordered": _('✅ Ваш заказ принят')
     }

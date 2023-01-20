@@ -4,7 +4,7 @@ from aiogram_dialog import Dialog, Window
 from aiogram_dialog.widgets.kbd import ScrollingGroup, Back, Select, Group, Cancel, Row, Button
 from aiogram_dialog.widgets.text import Format
 
-from .getters import categories_getter, products_getter, info_getter, order_confirmed
+from .getters import categories_getter, products_getter, info_getter
 from .handlers import on_category_clicked, on_product_clicked, on_buy_click
 from ...states.states import MenuForm
 
@@ -63,11 +63,6 @@ menu = Dialog(
         ),
         getter=info_getter,
         state=MenuForm.info
-    ),
-    Window(
-        Format('{ordered}'),
-        getter=order_confirmed,
-        state=MenuForm.ordered
     )
     # Window(
     #     Format('{enter_count}'),

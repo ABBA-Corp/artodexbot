@@ -35,7 +35,7 @@ async def on_product_clicked(
         await query.answer(text='Нет товаров', show_alert=True)
     else:
         await manager.switch_to(MenuForm.info)
-    manager.data.update(item_id=item_id, items=items)
+    manager.current_context().dialog_data.update(item_id=item_id)
 
 
 async def on_buy_click(
@@ -45,13 +45,15 @@ async def on_buy_click(
 ):
     dao: HolderDao = manager.data.get('dao')
     config = load_config('bot.ini')
-    item_id = manager.data.get('item_id')
+    item_id = manager.current_context().dialog_data.get('item_id')
+    # item_id = manager.current_context().start_data.get('item_id')
+    # print(item_id)
     item = await get_product_info(code=item_id)
     user = await dao.user.get_user(user_id=query.from_user.id)
     info = _(
         "📋 Новый заказ:\n"
         "👤 Заказчик: {user}\n"
-        "👨 Юзернейм: {username}\n"
+        "👨 Юзернейм: @{username}\n"
         "📲 Номер телефона: {phone}\n"
         "📦 Товар: {name}\n"
         "📤 Штрих-код: {barcode}"
@@ -62,10 +64,20 @@ async def on_buy_click(
         name=item.inventory[0].name,
         barcode=item.inventory[0].barcodes
     )
+    await dao.order.add_order(
+        user_id=query.from_user.id,
+        name=item.inventory[0].name,
+        product_code=item_id
+    )
     await query.message.bot.send_message(
         chat_id=config.tg_bot.channel_id,
         text=info
     )
-    await manager.switch_to(MenuForm.ordered)
+    await query.message.delete()
+    await query.message.answer(
+        text=_('✅ Ваш заказ принят, мы скоро свяжемся с вами')
+    )
+    await manager.done()
+
 
 # async def

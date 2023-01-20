@@ -1,5 +1,6 @@
 from aiogram import Dispatcher
 
+from .history import order_history
 from .main_menu import back_menu
 
 from tgbot.states.states import UserNameForm, UserPhoneForm
@@ -21,6 +22,7 @@ def register_buttons(dp: Dispatcher) -> None:
     dp.register_message_handler(back_menu, text=__('🏠 Главное меню'), state="*")
 
     dp.register_message_handler(explore_categories, text=__('📦 Категории'), state="*")
+    dp.register_message_handler(order_history, text=__('⏳ История заказов'), state="*")
 
     dp.register_message_handler(settings_menu, text=__('⚙️ Настройки'), state="*")
 

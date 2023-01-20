@@ -13,15 +13,13 @@ class OrderDAO(BaseDAO[Order]):
             self,
             user_id: int,
             name: str,
-            product_code: str,
-            count: int
+            product_code: str
     ):
         await self.session.execute(
             insert(Order).values(
                 user_id=user_id,
                 name=name,
-                product_code=product_code,
-                count=count
+                product_code=product_code
             )
         )
         await self.session.commit()

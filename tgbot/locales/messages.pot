@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-01-20 18:37+0500\n"
+"POT-Creation-Date: 2023-01-20 21:27+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -40,18 +40,18 @@ msgstr ""
 msgid "💵 Купить"
 msgstr ""
 
-#: dialogs/order/getters.py:62
-msgid "✅ Ваш заказ принят"
-msgstr ""
-
-#: dialogs/order/handlers.py:51
+#: dialogs/order/handlers.py:53
 msgid ""
 "📋 Новый заказ:\n"
 "👤 Заказчик: {user}\n"
-"👨 Юзернейм: {username}\n"
+"👨 Юзернейм: @{username}\n"
 "📲 Номер телефона: {phone}\n"
 "📦 Товар: {name}\n"
 "📤 Штрих-код: {barcode}"
+msgstr ""
+
+#: dialogs/order/handlers.py:78
+msgid "✅ Ваш заказ принят, мы скоро свяжемся с вами"
 msgstr ""
 
 #: handlers/buttons/main_menu.py:10 handlers/commands/start.py:23

@@ -7,16 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-01-20 18:37+0500\n"
-"PO-Revision-Date: 2023-01-20 18:38+0500\n"
+"POT-Creation-Date: 2023-01-20 21:27+0500\n"
+"PO-Revision-Date: 2023-01-20 21:28+0500\n"
 "Last-Translator: \n"
-"Language: uz\n"
 "Language-Team: uz <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Language: uz\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.9.1\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: dialogs/order/getters.py:17 keyboards/default/main_menu.py:14
 msgid "📦 Категории"
@@ -43,19 +44,19 @@ msgstr ""
 msgid "💵 Купить"
 msgstr "💵 Sotib olish"
 
-#: dialogs/order/getters.py:62
-msgid "✅ Ваш заказ принят"
-msgstr "✅ Buyurtmangiz qabul qilindi"
-
-#: dialogs/order/handlers.py:51
+#: dialogs/order/handlers.py:53
 msgid ""
 "📋 Новый заказ:\n"
 "👤 Заказчик: {user}\n"
-"👨 Юзернейм: {username}\n"
+"👨 Юзернейм: @{username}\n"
 "📲 Номер телефона: {phone}\n"
 "📦 Товар: {name}\n"
 "📤 Штрих-код: {barcode}"
 msgstr ""
+
+#: dialogs/order/handlers.py:78
+msgid "✅ Ваш заказ принят, мы скоро свяжемся с вами"
+msgstr "✅ Buyurtmangiz qabul qilindi, tez orada siz bilan bog'lanamiz"
 
 #: handlers/buttons/main_menu.py:10 handlers/commands/start.py:23
 #: handlers/content/register.py:53 handlers/query_handlers/language.py:34
@@ -130,3 +131,5 @@ msgstr "📞 Telefon raqamini o’zgartirish"
 msgid "🏠 Главное меню"
 msgstr "🏠 Asosiy menyu"
 
+#~ msgid "✅ Ваш заказ принят"
+#~ msgstr "✅ Buyurtmangiz qabul qilindi"
